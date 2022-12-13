@@ -2,7 +2,7 @@ package com.foundation;
 
 public class A_BasicGrammar {
     public static void main(String[] args) {
-//        ToDo:不知道这是啥，写写看看
+//        ToDo:不知道这是啥，写写看看  类似于标记的作用，可以很快的定位到这个位置，方便查找
         System.out.println("HelloWorld");
 
 //        双引号和单引号的区别

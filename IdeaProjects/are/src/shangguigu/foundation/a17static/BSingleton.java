@@ -39,6 +39,7 @@ class Bank{
 //    2、内部创建类的对象
 //    4、要求此对象也必须声明为静态的
     private static Bank instance = new Bank();
+//    public static final Bank instance = new Bank();  // 防止恶意修改；Bank.instance = null
 
 //    3、提供公共的静态方法，返回类的对象
     public static Bank getInstance(){

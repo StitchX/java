@@ -53,6 +53,10 @@ public class A3VariableClass {
 
 
 //    访问修饰符 关键字 返回类型 方法名 String类 字符串数组
+    /*
+    访问修饰符：public protected 缺省 private  封装性
+    修饰符：static final abstract native 可以用来修饰方法
+     */
     public static void main(String[] args) {
 
         A3VariableClass a3 = new A3VariableClass();

@@ -41,7 +41,7 @@ public class WrapperTest {
         System.out.println(str3);
     }
 
-//    3、JDK 5.0新特性：自动装箱与自动拆箱
+    //    3、JDK 5.0新特性：自动装箱与自动拆箱
     @Test
     public void demotest3(){
         int num = 10;
@@ -57,7 +57,7 @@ public class WrapperTest {
         System.out.println(num3);
     }
 
-//2、包装类-->基本数据类型：调用包装类的XXXValue()；包装类转换为基本数据类型，可以做基本数据类型运算
+    //2、包装类-->基本数据类型：调用包装类的XXXValue()；包装类转换为基本数据类型，可以做基本数据类型运算
     @Test
     public void demotest2(){
         Integer in1 = new Integer(10);
@@ -66,25 +66,7 @@ public class WrapperTest {
     }
 
 
-//    1、基本数据类型---->包装类：调用包装类的构造器
-    @Test
-    public void demotest1(){
-        int num1 = 10;
-        Integer in1 = new Integer(num1);
-        Integer in2 = new Integer("123"); //
-//        Integer in3 = new Integer("qwe"); // 注意一：字符串里面是数字，否则报错，转换失败
-        System.out.println(in1.toString()); // 10
 
-//        注意二：布尔类型源码是：不是true都是 false
-        Boolean bo1 = new Boolean("TRue");
-        Boolean bo2 = new Boolean("qwq");
-        System.out.println(bo1); // true
-        System.out.println(bo2); // false
-
-//        注意三：保证类默认是 null
-        System.out.println(new Wra().bo3); // null
-        System.out.println(new Wra().bo4);  // false
-    }
 
 
 }

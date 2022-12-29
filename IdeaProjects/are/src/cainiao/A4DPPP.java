@@ -1,5 +1,8 @@
 package cainiao;
-
+/*
+    访问修饰符：public protected 缺省 private  封装性
+    修饰符：static final abstract native 可以用来修饰方法
+     */
 // 访问修饰符
 public class A4DPPP {
     //    访问修饰符 关键字 返回类型 方法名 String类型 字符串数组

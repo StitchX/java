@@ -22,7 +22,7 @@ public class AM5Import {
         Scanner scan = new Scanner(System.in);
         out.println();
 
-        cainiao.A1Introduce a1 = new cainiao.A1Introduce(); // 7
+//        cainiao.A1Introduce a1 = new cainiao.A1Introduce(); // 7
 
         ProjectFour p4 = new ProjectFour(); // 6
 

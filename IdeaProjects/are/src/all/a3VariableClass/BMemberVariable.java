@@ -1,5 +1,6 @@
 package all.a3VariableClass;
 
+// 属性 = 成员变量 = field = 域、字段
 public class BMemberVariable {
     /*
         类变量：独立于方法之外的变量，用 static 修饰

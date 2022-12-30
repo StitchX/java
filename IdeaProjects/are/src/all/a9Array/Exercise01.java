@@ -1,6 +1,6 @@
 package all.a9Array;
 
-
+// 主要考引用数据类型的值传递
 public class Exercise01 {
     public static void main ( String[] args ){
 

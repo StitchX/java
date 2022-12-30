@@ -16,6 +16,8 @@ public class CLocalVariable {
 //        byte aa;
 //        System.out.println(aa);   // 必须初始化
 
+//        public int bb=9; // 访问修饰符不能用于局部变量
+
         int aa=2;
         System.out.println(aa);
     }

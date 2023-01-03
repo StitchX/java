@@ -1,4 +1,4 @@
-package shangguigu.foundation;
+package all.b5Encapsulation;
 /*
 面向对象的特征一：封装和隐藏
 一、问题引入

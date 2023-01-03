@@ -1,4 +1,6 @@
-package shangguigu.foundation;
+package all.b9Import;
+
+import shangguigu.foundation.ProjectFour;
 
 import java.util.Scanner;  // 1、2
 

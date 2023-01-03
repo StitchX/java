@@ -1,4 +1,4 @@
-package shangguigu.foundation.a13polymorphism;
+package all.b13polymorphism;
 /*
 考试题二：
     考察可变参数的使用；重载；覆盖

@@ -1,4 +1,4 @@
-package shangguigu.foundation;
+package all.b7JavaBean;
 
 /*
 JavaBean是一种Java语言写成的可重用组件

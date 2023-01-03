@@ -1,7 +1,6 @@
-package shangguigu.foundation;
-// 二维数组打印一个，杨辉三角
+package all.a5Loop;
 
-public class ProjectTwo {
+public class Exercise01 {
     public static void main(String[] args) {
         int[][] a = new int[10][];
 

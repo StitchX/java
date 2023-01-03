@@ -1,4 +1,4 @@
-package shangguigu.foundation;
+package all.b8This;
 
 public class ProjectFiveThis {
     public static void main(String[] args) {

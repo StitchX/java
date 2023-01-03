@@ -1,4 +1,4 @@
-package shangguigu.foundation;
+package all.b6Constructor;
 /*
 类的结构之三：构造器（或构造方法、constructor）的使用
 constructor：建造者

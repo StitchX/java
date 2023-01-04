@@ -3,6 +3,7 @@ package project.project01;
 import java.util.Scanner;
 
 // 家庭分支手账明细
+// 家庭收支记账软件
 public class ProjectOne {
 
     public static void main(String[] args) {

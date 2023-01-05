@@ -19,4 +19,16 @@ public class Designer extends Programmer{
     public Designer() {
         super();
     }
+
+    @Override
+    public String toString() {
+        return getDetail()+"\t\t"+"设计师 " +
+                "\t"+getStatus()+
+                "\t" + bonus + "\t\t\t\t" +getEquipment().getDescription();
+    }
+
+    public String getDetailsForTeam(){
+        return getMemberId() +"/"+getId()+" \t"+getName()+" \t"+getAge()+"\t\t"+getSalary()+" \t"+"设计师 "+
+                "\t" + bonus + "\t\t\t\t" ;
+    }
 }

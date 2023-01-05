@@ -3,15 +3,13 @@ package project.project3.domain;
 import project.project3.service.Status;
 
 public class Programmer extends Employee{
-    private int memberId;
+    private int memberId; // 开发团队中的id
     private Equipment equipment;
-    private Status status;
+    private Status status = Status.FREE;
 
-    public Programmer(int id, String name, int age, double salary,  Equipment equipment) {
+    public Programmer(int id, String name, int age, double salary, Equipment equipment) {
         super(id,name,age,salary);
-        this.memberId = memberId;
         this.equipment = equipment;
-        this.status = status;
     }
     public Programmer() {
         super();
@@ -39,5 +37,15 @@ public class Programmer extends Employee{
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return getDetail()+"\t\t"+"程序员" +
+                "\t" + status + " \t\t\t\t\t\t" +equipment.getDescription();
+    }
+
+    public String getDetailsForTeam(){
+        return memberId +"/"+getId()+" \t"+getName()+" \t"+getAge()+" \t\t"+getSalary()+"\t\t"+"程序员";
     }
 }

@@ -2,12 +2,12 @@ package project.project3.domain;
 //步骤二：
 public class NoteBook implements Equipment{
     private String model;  // 机器型号
-    private String price;
+    private Double price;
 
     public NoteBook() {
     }
 
-    public NoteBook(String model, String price) {
+    public NoteBook(String model, Double price) {
         this.model = model;
         this.price = price;
     }
@@ -20,11 +20,11 @@ public class NoteBook implements Equipment{
         this.model = model;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

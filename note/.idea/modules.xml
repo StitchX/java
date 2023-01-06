@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/abasicstage/abasicstage.iml" filepath="$PROJECT_DIR$/abasicstage/abasicstage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/badvancedstage/badvancedstage.iml" filepath="$PROJECT_DIR$/badvancedstage/badvancedstage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cprojects/cprojects.iml" filepath="$PROJECT_DIR$/cprojects/cprojects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dinterviewer/dinterviewer.iml" filepath="$PROJECT_DIR$/dinterviewer/dinterviewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/note.iml" filepath="$PROJECT_DIR$/note.iml" />
+    </modules>
+  </component>
+</project>

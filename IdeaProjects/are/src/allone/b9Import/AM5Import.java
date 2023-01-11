@@ -1,6 +1,6 @@
 package allone.b9Import;
 
-import shangguigu.foundation.ProjectFour;
+import shangguigu.ProjectFour;
 
 import java.util.Scanner;  // 1、2
 

@@ -1,11 +1,8 @@
 package project3.service;
 // 步骤10
 
-import project.project3.domain.*;
-
-import java.util.function.DoublePredicate;
-
-import static project.project3.service.Data.*;
+import project3.domain.*;
+import static project3.service.Data.*;
 
 
 /**

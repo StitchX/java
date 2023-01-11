@@ -1,9 +1,9 @@
 package project3.service;
 
-import project.project3.domain.Architect;
-import project.project3.domain.Designer;
-import project.project3.domain.Employee;
-import project.project3.domain.Programmer;
+import project3.domain.Architect;
+import project3.domain.Designer;
+import project3.domain.Employee;
+import project3.domain.Programmer;
 
 /**
  * @author Eva   Email:

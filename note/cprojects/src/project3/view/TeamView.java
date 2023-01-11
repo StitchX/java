@@ -1,6 +1,6 @@
 package project3.view;
 
-import project.project02.util.CMUtility;
+import project3.view.TSUtility;
 import project3.domain.Employee;
 import project3.domain.Programmer;
 import project3.service.NameListService;
@@ -37,7 +37,7 @@ public class TeamView {
                     break;
                 case '4':
                     System.out.print("确认是否退出（Y/N）:");
-                    char isExit = CMUtility.readConfirmSelection();
+                    char isExit = TSUtility.readConfirmSelection();
                     if (isExit == 'Y'){
                         loopFlag = false;
                     }

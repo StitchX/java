@@ -31,7 +31,7 @@ public class JSynThread02 extends Thread{
         }
     }
 
-    public synchronized static void show(){
+    public synchronized static void show(){ //同步监视器: JSynThread02.class
         if (ticket>0){
             try {
                 Thread.sleep(10);

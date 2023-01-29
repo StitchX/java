@@ -5,7 +5,7 @@ package d1thread;
  * @Description 第二种创建多线程的方式
  * @data 2023/1/10 15:40
  */
-public class EThreadRunnable implements Runnable {
+public class ERunnable implements Runnable {
     /*
     创建多线程的方式二：实现Runnable接口
     1、创建一个实现类Runnable中的抽象方法：run()
@@ -25,7 +25,7 @@ public class EThreadRunnable implements Runnable {
     private int ticket = 100;
 //    目前有线程安全问题，之后讲解
     public static void main(String[] args) {
-        EThreadRunnable er1 = new EThreadRunnable();
+        ERunnable er1 = new ERunnable();
         Thread t1 = new Thread(er1);
         Thread t2 = new Thread(er1);
         Thread t3 = new Thread(er1);

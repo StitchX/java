@@ -2,6 +2,7 @@ package d1thread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author Eva   Email:
@@ -9,9 +10,26 @@ import java.util.concurrent.Executors;
  * @data 2023/1/13 11:39
  */
 public class QThreadPool implements Runnable{
+    /*
+    背景：经常创建和销毁、使用量特别大的资源，比如并发情况下的线程，对性能影响很大
+    好处：
+        1、提高响应速度（减少了创建新线程的时间）
+        2、降低资源消耗（重复利用线程池中线程，不需要每次都创建）
+        3、便于线程管理
+            corePoolSize：核心池的大小
+            maximumPoolSize：最大线程数
+            keepAliveTime：线程没有任务时最多保持多长时间后会终止
+            ...
+     */
     public static void main(String[] args) {
 //        1. 提供指定数量的线程池
         ExecutorService service = Executors.newFixedThreadPool(10);
+
+//        设置线程池的属性
+//        ThreadPoolExecutor service1 = (ThreadPoolExecutor) service;
+        System.out.println(service.getClass());
+//        service1.setCorePoolSize(10);
+//        service1.setKeepAliveTime(1000);
 
 //        2. 执行指定的线程的操作。需要提供实现Runnable接口或Callable接口实现类的对象
         service.execute(new QThreadPool());
@@ -29,3 +47,5 @@ public class QThreadPool implements Runnable{
         }
     }
 }
+
+// 面试题：创建多线程的几种方式？

@@ -1,5 +1,7 @@
 package a6condition;
-
+/*
+条件语句：if, switch
+ */
 public class ACondition {
 
     public static void main(String[] args) {

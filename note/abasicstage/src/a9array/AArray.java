@@ -68,7 +68,6 @@ public class AArray {
         return aa;
     }
 
-
 //    6. 数组作为参数
     public void arraydemo(int[] i){
 //        7. for增强
@@ -76,6 +75,5 @@ public class AArray {
             System.out.println(j);
         }
     }
-
 
 }

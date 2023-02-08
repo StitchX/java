@@ -1,4 +1,4 @@
-package a9array;
+package a8array;
 /*
 数组中常见的异常：
     1、数组角标越界的异常：ArrayIndexOutOfBoundsException

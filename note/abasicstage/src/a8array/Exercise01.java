@@ -1,4 +1,4 @@
-package a9array;
+package a8array;
 
 // 主要考引用数据类型的值传递
 public class Exercise01 {

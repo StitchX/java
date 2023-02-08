@@ -14,6 +14,8 @@ public class FStringBufferBuilder {
     StringBuffer: 可变的字符序列；线程安全，效率低；底层使用char[]存储; 底层使用了synchronized同步解决线程安全
     StringBulider:可变的字符序列；jdk5.0新增的，线程不安全，效率高； 底层使用char[]存储；与StringBuffer方法差不多
 
+    效率对比：2*StringBulider约等于StringBuffer 远快于 String
+
     源码分析：
     String str1 = new String();//char[] value = new char[0];
     String str2 = new String("abc")//char[] value = new char[]{'a','b','c'}
@@ -44,6 +46,17 @@ public class FStringBufferBuilder {
     public int length()
     public char charAt(int n)
     public void setCharAt(int n, char ch)
+
+    总结：
+    增：append(XXX)
+    删：delete(int start,int end)
+    改：setCharAt(int n, char ch)
+    查：charAt(int n)
+    插：insert(int offset, xxx)
+    长度：length()
+    遍历：for() + charAt() / toString()
+
+    如上方法支持方法链操作。原理需要后面查一查
 
      */
     StringBuilder sb1 = new StringBuilder(10);

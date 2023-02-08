@@ -1,4 +1,4 @@
-package a9array;
+package a8array;
 
 //数组作为参数是引用传递 ，在 doIt 方法中可以修改数组的值 。
 class ZDemo02 {

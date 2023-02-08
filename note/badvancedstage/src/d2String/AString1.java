@@ -63,7 +63,7 @@ public class AString1 {
     @Test
     public void test3(){
         String s1 = "javaEE";
-        String s2 = "hadoop";
+        String s2 = "hadoop"; // 面试题：final String s2 = "hadoop"；这是个常量
 
         String s3 = "javaEE"+"hadoop";
         String s4 = "javaEEhadoop";
@@ -84,7 +84,7 @@ public class AString1 {
 
 }
 
-//        了解下原理：
+//        String对象的创建：了解下原理
 //        char[] a = {'1','2','3','4','5'};
 //        String s1 = new String();
 //        String s2 = new String("qwer");

@@ -18,7 +18,7 @@ public class AIDEADebug {
 
 //        NullPointerException
         StringBuffer sb2 = new StringBuffer(str);
-        System.out.println(str);
+        System.out.println(sb2);
     }
 
     /*

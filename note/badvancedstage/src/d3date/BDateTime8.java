@@ -2,9 +2,11 @@ package d3date;
 
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.time.temporal.TemporalAccessor;
+import java.util.Date;
 
 /**
  * @author Eva   Email:
@@ -15,8 +17,9 @@ public class BDateTime8 {
     /*
     localDate,localTime,localDateTime的使用
     说明：
-        1、localTime相较于localDate，localDateTime，使用频率要高
+        1、localDateTime相较于localDate(日期)，localTime（时间点），使用频率要高
         2、类似于Calendar
+        3、 分别使用ISO-8611（国际化组织制定的现代公民的日期和时间的表示，也是公历）日历系统的时间
      */
     @Test
     public void test01(){
@@ -56,21 +59,70 @@ public class BDateTime8 {
         System.out.println(localDateTime05);
 
     }
+    /*
+    java.time包通过值类型Instant提供机器视图，不提供处理人类意义上的时间单位。
+    从1970年1月1日0时0分0秒（UTC）开始的秒数
+    计算世界时间的主要标准有：
+        UTC（Coordinated Universal Time）
+        GMT（GreenwichMean Time）
+        CST（Central Standard Time）
+    Instant使用
+        类似与java.util.Date类
+     */
     @Test
     public void test02(){
+        // 静态方法，默认返回UTC时区的时间
+        Instant instant01 = Instant.now(); // 对应本初子午线
+//        静态方法，返回1970.1.1 00:00:00基础上加上指定毫秒数之后的Instant类的对象
+        Instant instant02 = Instant.ofEpochMilli(1000);
+
+        System.out.println(instant01);
+        System.out.println(instant02);
+
+//        添加时间的偏移量
+        System.out.println(instant01.atOffset(ZoneOffset.ofHours(8)));
+
+//        从1970年1月1日0时0分0秒（UTC）开始的毫秒数
+        long t1 = instant01.toEpochMilli(); // DateTime中的getTime方法
+        System.out.println(t1);
 
     }
+    /*
+    DateTimeFomatter类：格式化或解析日期、时间
+    类似于：SimpleDateFormat
+
+     */
     @Test
     public void test03(){
+//        三种声明方式
+//        方式一：预定义的标准格式，如：ISO_LOCAL_DATE_TIME，ISO_LOCAL_DATE，ISO_LOCAL_TIME
+        DateTimeFormatter dtf01 = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+//        格式化：日期———>字符串
+        String str = dtf01.format(LocalDateTime.now());
+        System.out.println(str);
 
-    }
-    @Test
-    public void test04(){
+//        解析：字符串-->日期
+        TemporalAccessor t1 = dtf01.parse("2023-02-13T10:38:59.784912");
+        System.out.println(t1);
 
-    }
-    @Test
-    public void test05(){
+//        方式二：
+//        本地化相关的格式。如：ofLocalizedDateTime()
+//        FormatStyle.LONG/FormatStyle.MEDIUM/FormatStyle.SHORT
+        DateTimeFormatter dtf02 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+        //        格式化：日期———>字符串
+        System.out.println(dtf02.format(LocalDateTime.now()));
 
+//        本地化相关的格式。如：ofLocalizedDateTime()
+//        FormatStyle.LONG/FormatStyle.MEDIUM/FormatStyle.SHORT/FormatStyle.FULL：适用于LocalDate
+        DateTimeFormatter dtf03 = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        System.out.println(dtf03.parse("2023/2/13"));
+
+//        重点：方式三：自定义的格式：如：ofPattern("yyyy-MM-dd hh:mm:ss")
+        DateTimeFormatter dtf04 = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+//        格式化
+        String s1 = dtf04.format(LocalDateTime.now());
+        System.out.println(s1);
+//
     }
 }
 

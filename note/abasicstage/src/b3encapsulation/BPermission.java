@@ -2,13 +2,13 @@ package b3encapsulation;
 
 /**
  * @author Eva   Email:
- * @Description
+ * @Description 权限修饰符
  * @data 2023/2/16 17:01
  */
 public class BPermission {
     /*
     三、封装性的体现，需要权限修饰符来配合。
-    1. Java规定的4种权限（从小到大排列）：private、缺省、protected、public
+    1. Java规定的4种权限（从小到大排列）：private(堆空间会存在，只是其他不能调用)、缺省、protected、public
     类内部           同一个包          不同包的子类         同一个工程
     private
                     default

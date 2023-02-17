@@ -2,7 +2,7 @@ package b2method;
 
 /**
  * @author Eva   Email:
- * @Description
+ * @Description 递归方法
  * @data 2023/2/16 16:16
  */
 public class FRecursion {

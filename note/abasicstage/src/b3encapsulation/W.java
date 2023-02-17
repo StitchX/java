@@ -3,7 +3,8 @@ package b3encapsulation;
 /**
  * @author Eva   Email:
  * @Description
- * @data 2023/2/16 17:01
+ * @data 2023/2/17 14:40
  */
-public class Permission {
+interface W {
+    int a = 0;
 }

@@ -27,6 +27,10 @@ public class BOverride extends AInheritance{
     子类和父类中的同名同参数的方法要么都声明为非static的(考虑重写)，要么都声明为static的 (不是重写）
     面试题，区分方法的重载与重写
      */
+    int id;
+    public BOverride(String name){
+
+    }
 
     @Override
     public String AA() {

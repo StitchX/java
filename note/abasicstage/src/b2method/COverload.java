@@ -2,7 +2,7 @@ package b2method;
 
 /**
  * @author Eva   Email:
- * @Description 方法的重载
+ * @Description 方法的重载overload
  * @data 2023/2/16 16:05
  */
 public class COverload {
@@ -43,6 +43,7 @@ public class COverload {
     重载可以理解成多态的具体表现形式
 
     重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。
+    最常用的地方就是构造器的重载。
     每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。
     最常用的地方就是构造器的重载
     重载规则:
@@ -52,4 +53,5 @@ public class COverload {
         4、被重载的方法可以声明新的或更广的检查异常；
         5、方法能够在同一个类中或者在一个子类中被重载。
         6、无法以返回值类型作为重载函数的区分标准。
+
      */

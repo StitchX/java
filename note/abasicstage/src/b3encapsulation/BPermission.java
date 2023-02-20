@@ -5,7 +5,7 @@ package b3encapsulation;
  * @Description 权限修饰符
  * @data 2023/2/16 17:01
  */
-public class BPermission {
+public class BPermission extends AEncapsulation{
     /*
     三、封装性的体现，需要权限修饰符来配合。
     1. Java规定的4种权限（从小到大排列）：private(堆空间会存在，只是其他不能调用)、缺省、protected、public
@@ -36,4 +36,14 @@ public class BPermission {
     }
 
 //    接口里面只能是public的
+
+    public void E(){
+        System.out.println("不是继承关系");
+    }
+
+    @Override
+    protected void F() {
+        super.F();
+        System.out.println("不同的包，可以继承，但是不能直接使用");
+    }
 }

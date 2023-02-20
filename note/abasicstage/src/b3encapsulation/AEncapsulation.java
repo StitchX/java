@@ -54,6 +54,14 @@ public class AEncapsulation {
         }
         this.age = age;
     }
+
+    private void E(){
+        System.out.println("不能继承");
+    }
+
+    protected void F(){
+        System.out.println("不能继承");
+    }
 }
 
 /*

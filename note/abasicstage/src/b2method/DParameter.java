@@ -21,3 +21,8 @@ package b2method;/**
     public void show(String... strs){}
 //    public void show(String[] strs){}
 }
+
+    /*
+    可变参数的形参:Java 5 新特性
+    使用：sql多条件查询
+     */

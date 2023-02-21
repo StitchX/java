@@ -2,10 +2,8 @@ package d9collection;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Date;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * @author Eva   Email:
@@ -16,7 +14,7 @@ public class BCollection {
     /*
     Collection接口中声明的方法的测试
     结论：
-    向Collection接口的实现类的对象中添加数据obj时，要求obj所在类要重写equals().
+        向Collection接口的实现类的对象中添加数据obj时，要求obj所在类要重写equals().
      */
 
     @Test
@@ -118,5 +116,37 @@ public class BCollection {
         Collection coll3 = Arrays.asList(456,123,789);
         System.out.println(coll2.equals(coll3)); // false , 注意顺序也要相同
 
+    }
+
+    @Test
+    public void test05(){
+        Collection coll1=new ArrayList();
+        coll1.add("AA");
+        coll1.add("BB");
+        coll1.add("eew");
+        coll1.add(123);
+
+//        7. hashCode()：返回当前对象的哈希值
+        System.out.println(coll1.hashCode());
+
+//        8. 集合 --- > 数组：toArray()
+        Object[] arr = coll1.toArray();
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
+//        拓展：数组--->集合：调用Arrays类的静态方法asList()
+        List list = Arrays.asList(new String[]{"11","22","33"});
+        System.out.println(list);
+
+        List arr1 = Arrays.asList(new int[]{123,321}); // 会认为是一个元素
+        System.out.println(arr1);
+
+//        解决方案
+        List arr2 = Arrays.asList(new Integer[]{123,321});
+        System.out.println(arr2);
+
+        List arr3 = Arrays.asList(123, 456);
+        System.out.println(arr3);
     }
 }

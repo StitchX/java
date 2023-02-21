@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  * @author Eva   Email:
- * @Description
+ * @Description 集合的介绍
  * @data 2023/2/15 14:02
  */
 public class AIntroduce {
@@ -42,3 +42,14 @@ public class AIntroduce {
      */
 
 }
+
+
+/*
+1、Java集合框架概述
+2、collection接口方法
+3、iterator迭代器接口
+4、collection子接口一：List
+5、collection子接口二：Set
+6、Map接口
+7、Collections工具类
+ */

@@ -59,12 +59,14 @@ public class BCollection {
         System.out.println(contains); // true
         System.out.println(coll1.contains(new String("qwe"))); //true 证明调用的是重写的equals方法
 
-//        原方法被重写过，所以是true
+//        原方法toString被重写过，所以是true
         System.out.println(coll1.contains(new YDemo(13,"jerry")));
 
 //        2. containsAll(Collection coll1): 判断形参coll1中的所有元素是否都存在当前集合中
+//        顺序可以不相同
         Collection coll2=new ArrayList();
         coll2.add("AA");
+//        coll2.add("BB");
         coll2.add("eew");
         coll2.add(123);
         coll2.add(new String("qwe"));
@@ -111,6 +113,7 @@ public class BCollection {
         coll1.retainAll(coll2);
         System.out.println(coll1); // [123]
 //        6. equals(Object obj): 要想返回true，需要当前集合和形参集合的元素都相同
+//        需要有序
         System.out.println(coll1.equals(coll2)); // false
 
         Collection coll3 = Arrays.asList(456,123,789);
@@ -144,7 +147,7 @@ public class BCollection {
 
 //        解决方案
         List arr2 = Arrays.asList(new Integer[]{123,321});
-        System.out.println(arr2);
+        System.out.println(arr2.size());
 
         List arr3 = Arrays.asList(123, 456);
         System.out.println(arr3);

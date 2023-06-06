@@ -5,6 +5,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import static java.util.Arrays.sort;
+
 /**
  * @author Eva   Email:
  * @Description 定制排序
@@ -28,7 +30,7 @@ public class BComparator {
     @Test
     public void test01(){
         String[] arr = new String[]{"AA","DD","FF","BB","CC","EE"};
-        Arrays.sort(arr,new Comparator(){
+        sort(arr,new Comparator(){
 //            按照字符串从大到小排序
             @Override
             public int compare(Object o1,Object o2) {
@@ -52,7 +54,8 @@ public class BComparator {
         goods[3] = new YDemo("锤子",3121);
         goods[4] = new YDemo("oppo",1458);
 
-        Arrays.sort(goods,new Comparator(){
+        sort(goods,new Comparator(){
+//        Arrays.sort(goods,new Comparator(){
 //            指明商品比较大小的方式：按照产品名称从低到高排序，再按照价格从高到低排序
             @Override
             public int compare(Object o1, Object o2) {

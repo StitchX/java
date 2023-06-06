@@ -51,6 +51,12 @@ public class  CIterator {
         Iterator是迭代器，不是容器
          */
 
+//        错误方式二：
+//        集合对象每次调用iterator() 方法都得到一个全新的迭代器对象，默认游标都在集合的第一个
+        while (coll1.iterator().hasNext()){
+            System.out.println(coll1.iterator().next());
+        }
+
     }
 
     /*
@@ -66,6 +72,9 @@ public class  CIterator {
         coll1.add(123);
 
         Iterator it01 = coll1.iterator();
+//        测试Iterator中的remove()
+//        如果还未调用next()或在上一次调用next方法之后调用了remove方法，
+//        再调用remove都会报IllegalStateException
 
         while (it01.hasNext()){
             Object obj = it01.next();

@@ -27,4 +27,25 @@ public class DForEach {
             System.out.println(obj);
         }
     }
+
+//    练习题
+    @Test
+    public void test3(){
+        String[] arr = new String[]{"DD","DD","DD"};
+
+//        方式一：普通for赋值
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]="FF";
+        }
+
+//        方式二：增强for循环
+        for (String s:
+             arr) {
+            s = "HH";
+        }
+
+        for (int j = 0; j < arr.length; j++) {
+            System.out.println(arr[j]);
+        }
+    }
 }

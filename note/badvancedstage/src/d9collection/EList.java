@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -75,7 +74,7 @@ public class EList {
         list.add(123);
         list.add(456);
         list.add("AA");
-        list.add(new YDemo(12,"tom"));
+        list.add(new YDemo01(12,"tom"));
         list.add(342);
 
         System.out.println(list);
@@ -99,7 +98,7 @@ public class EList {
         list.add(123);
         list.add(456);
         list.add("AA");
-        list.add(new YDemo(12,"tom"));
+        list.add(new YDemo01(12,"tom"));
         list.add(342);
 
         System.out.println(list);

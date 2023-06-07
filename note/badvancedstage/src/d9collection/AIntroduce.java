@@ -35,7 +35,7 @@ public class AIntroduce {
                 |--HashSet、LinkedHashSet、TreeSet
 
         |----Map接口：双列集合，用来存储一对（key-value）一对的数据 -->高中函数：y=f(x)
-            |--HashMap、LinkedHashMap、TreeMap、Hashable、Properties
+            |--HashMap、LinkedHashMap、TreeMap、Hashtable、Properties
 
     三、Collection接口中的方法的使用
 

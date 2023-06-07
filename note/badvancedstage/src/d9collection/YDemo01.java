@@ -1,5 +1,6 @@
 package d9collection;
 
+
 import java.util.Objects;
 
 /**
@@ -7,14 +8,14 @@ import java.util.Objects;
  * @Description
  * @data 2023/2/15 16:56
  */
-public class YDemo {
+public class YDemo01{
     private int age;
     private String name;
 
-    public YDemo() {
+    public YDemo01() {
     }
 
-    public YDemo(int age, String name) {
+    public YDemo01(int age, String name) {
         this.age = age;
         this.name = name;
     }
@@ -46,8 +47,8 @@ public class YDemo {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof YDemo yDemo)) return false;
-        return age == yDemo.age && Objects.equals(name, yDemo.name);
+        if (!(o instanceof YDemo01 yDemo01)) return false;
+        return age == yDemo01.age && Objects.equals(name, yDemo01.name);
     }
 
 //    @Override

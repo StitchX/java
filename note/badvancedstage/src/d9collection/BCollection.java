@@ -2,7 +2,6 @@ package d9collection;
 
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -51,7 +50,7 @@ public class BCollection {
         coll1.add(123);
         coll1.add(new String("qwe"));
         coll1.add(false);
-        coll1.add(new YDemo(13,"jerry"));
+        coll1.add(new YDemo01(13,"jerry"));
 
 //        1. contains(Object obj)：判断当前集合中是否包含obj
 //        我们在判断时会调用obj对象所在类的equals()
@@ -60,7 +59,7 @@ public class BCollection {
         System.out.println(coll1.contains(new String("qwe"))); //true 证明调用的是重写的equals方法
 
 //        原方法toString被重写过，所以是true
-        System.out.println(coll1.contains(new YDemo(13,"jerry")));
+        System.out.println(coll1.contains(new YDemo01(13,"jerry")));
 
 //        2. containsAll(Collection coll1): 判断形参coll1中的所有元素是否都存在当前集合中
 //        顺序可以不相同
@@ -71,7 +70,7 @@ public class BCollection {
         coll2.add(123);
         coll2.add(new String("qwe"));
         coll2.add(false);
-        coll2.add(new YDemo(13,"jerry"));
+        coll2.add(new YDemo01(13,"jerry"));
         System.out.println(coll2.containsAll(coll1)); // false
 
     }

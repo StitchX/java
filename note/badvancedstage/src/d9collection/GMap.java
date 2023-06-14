@@ -2,9 +2,7 @@ package d9collection;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author Eva   Email:
@@ -70,11 +68,35 @@ import java.util.Map;
  *    四、linkHashMap 的底层实现原理（了解）
  *    源码中：
  *    static class Entry<K,V> extends HashMap.Node<K,V> {
- *         Entry<K,V> before, after;
+ *         Entry<K,V> before, after;  // 能够记录添加的元素的先后顺序
  *         Entry(int hash, K key, V value, Node<K,V> next) {
  *             super(hash, key, value, next);
  *         }
  *     }
+ *
+ *     五、Map中定义的方法:
+ *      添加、删除、修改操作:
+ *      Object put(Object key,Object value): 指keyvalue添加到(或修改)当前map对象中
+ *      void putALL(Map m):将m中的有key-value对存放到当前map中
+ *      Object remove(Object key): 移除指定key的key-value对，并返回value
+ *      void cLear(): 清空当前map 中的所有效据
+ *      元素查询的操作:
+ *      Object get(Object key): 获指定key应的value
+ *      boolean containsKey(Object key):是否包合指定的key
+ *      boolean containsValue(Object value): 是否包合指定的value
+ *      int size():返map中key-value对的个数
+ *      boolean isEmpty(): 判断当前map是否为空
+ *      boolean equals(Object obi): 判断当前map和参数对象obi是否相等
+ *      元视图操作的方法:
+ *      Set keySet():返回所有key构成的Set集合
+ *      CoLLection values(): 返回所有vaLue成的CoLLection集合
+ *      Set entrySet():返所有key-value对成的Set集合
+ *
+ *   总结:常用方法:
+ *      添加: put(Object key,Object value)
+ *      删除: remove(Object key)修改: put(Object key,Object value)
+ *      查询:get(Object key)长度: size()
+ *      遍历: keySet() / values() / entrySet()
  *
  *
  * @data 2023/6/7 15:51
@@ -91,6 +113,119 @@ public class GMap {
         map.put(33,"odk");
 
         System.out.println(map);
+    }
+
+    /*
+        添加、删除、修改操作:
+          Object put(Object key,Object value): 指keyvalue添加到(或修改)当前map对象中
+          void putALL(Map m):将m中的有key-value对存放到当前map中
+          Object remove(Object key): 移除指定key的key-value对，并返回value
+          void cLear(): 清空当前map 中的所有效据
+     */
+
+    @Test
+    public void test02(){
+        Map map1 = new HashMap();
+
+//        添加
+        map1.put("q","oiu");
+        map1.put("SS","oiu");
+        map1.put(321,"oiu");
+//        修改
+        map1.put("q","ooi");
+
+        Map map2 = new HashMap();
+        map2.put("te","r");
+        map2.put("bb","e");
+
+        map1.putAll(map2);
+
+        System.out.println(map1);
+
+//        remove(Object key)
+        Object obj = map1.remove("q"); // 不存在则返回null
+        System.out.println(obj);
+        System.out.println(map1);
+
+//        clear()
+        map1.clear();  // 与map = null操作不同
+        System.out.println(map1);
+    }
+    /*
+    元素查询的操作:
+      Object get(Object key): 获指定key应的value
+      boolean containsKey(Object key):是否包合指定的key
+      boolean containsValue(Object value): 是否包合指定的value
+      int size():返map中key-value对的个数
+      boolean isEmpty(): 判断当前map是否为空
+      boolean equals(Object obi): 判断当前map和参数对象obi是否相等
+     */
+    @Test
+    public void test03(){
+        Map map1 = new HashMap();
+
+        map1.put("q","oiu");
+        map1.put("SS","GG");
+        map1.put(321,"32R");
+//
+        System.out.println(map1.get(321)); // 不存在则为：null
+
+        System.out.println(map1.containsKey("SS"));
+        System.out.println(map1.containsValue("oiu"));
+
+        map1.clear();
+        System.out.println(map1.isEmpty());
+
+    }
+    /*
+    元视图操作的方法:
+      Set keySet():返回所有key构成的Set集合
+      CoLLection values(): 返回所有vaLue成的CoLLection集合
+      Set entrySet():返所有key-value对成的Set集合
+     */
+
+    @Test
+    public void test04(){
+        Map map1 = new HashMap();
+
+        map1.put("q","oiu");
+        map1.put("SS","GG");
+        map1.put(321,"32R");
+
+//        遍历所有元素，由于key和value是两个集合，所以获取到两个集合就行
+//        遍历所有的key集：keySet()
+        Set set1 = map1.keySet();
+        Iterator iterator1 = set1.iterator();
+
+        while (iterator1.hasNext()){
+            System.out.println(iterator1.next());
+        }
+        System.out.println("-------------");
+
+//        遍历所有的value集：values()
+        Collection collection = map1.values();
+        Iterator iterator2 = collection.iterator();
+
+        while (iterator2.hasNext()){
+            System.out.println(iterator2.next());
+        }
+        System.out.println("-------------");
+//        遍历所有的key-value
+//        方式一：entrySet()
+        Set entrySet = map1.entrySet();
+        Iterator it01 = entrySet.iterator();
+        while (it01.hasNext()){
+            Object obj = it01.next();
+//            entrySet 集合中的元素都是entry
+            Map.Entry entry = (Map.Entry) obj;
+            System.out.println(entry.getKey()+"---->" +entry.getValue());
+        }
+
+//        方式二：
+//        获取所有的key，通过key获取到value，不写了，上面方法拼凑出来的
+
+//        遍历的目的是一个一个取出来
+
     }
 }
 

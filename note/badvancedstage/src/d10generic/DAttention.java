@@ -10,7 +10,7 @@ import java.util.List;
  * @Description
  * @data 2023/6/25 16:44
  */
-public class Dtention {
+public class DAttention {
     /*
     1.泛型类可能有多个参数，此时应将多个参数一起放在尖括号内。比如:<E1,E2,E3>
     2.泛型类的构造器如下: public GenericClass()
@@ -55,7 +55,7 @@ public class Dtention {
 //    测试泛型方法
     @Test
     public static void test01(){
-        Dtention d1 =new Dtention();
+        DAttention d1 =new DAttention();
         Integer[] arr = new Integer[]{1,2,3,4};
 //        泛型方法在调用时，指明泛型参数的类型。
         List<Integer> list = d1.copyFromArrayToList(arr);

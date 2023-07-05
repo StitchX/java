@@ -12,11 +12,11 @@ import java.io.*;
  * 2.效据的流向:输入流、输出流
  * 3.流的角色:节点流、处理流
  *  二、流的体系结构
- *  抽象基类                   节点流(或文件流)              缓冲流(处理流的一种)
- *  InputStream              FileInputStream            BufferedInputStream
- *  OutputStreamReader       FileOutputstream           BufferedOutputstream
- *  Reader                    FiLeReader                  BufferedReader
- *  Writer                    Filewriter                   Bufferedwriten
+ *  抽象基类                   节点流(或文件流)                                         缓冲流(处理流的一种)
+ *  InputStream              FileInputStream  （read(byte[] buffer)）                BufferedInputStream（read(byte[] buffer)）
+ *  OutputStreamReader       FileOutputstream  (write(byte[] buffer,0,len))         BufferedOutputstream(write(byte[] buffer,0,len)) / flush()
+ *  Reader                    FiLeReader       （read(char[] cbuf)）                 BufferedReader（read(char[] cbuf) / readline()）
+ *  Writer                    Filewriter        (write(char[] cbuf,0,len))          Bufferedwriten(write(char[] cbuf,0,len)) / flush()
  * @data 2023/6/27 15:54
  */
 public class CStream {

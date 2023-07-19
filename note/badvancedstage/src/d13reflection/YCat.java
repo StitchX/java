@@ -1,5 +1,7 @@
 package d13reflection;
 
+import java.io.IOException;
+
 /**
  * @author Eva   Email:
  * @Description
@@ -15,7 +17,8 @@ public class YCat extends YCreature<String> implements Comparable<String>,YMyInt
     public YCat() {
     }
 
-    public YCat(String name) {
+    @YMyAnnotation(value = "abc")
+    private YCat(String name) {
         this.name = name;
     }
     YCat(String name, int age) {
@@ -23,12 +26,13 @@ public class YCat extends YCreature<String> implements Comparable<String>,YMyInt
         this.age = age;
     }
 
+    @YMyAnnotation
     private String show(String nation){
         System.out.println("我的国籍是："+nation);
         return nation;
     }
 
-    public String display(String interests){
+    public String display(String interests) throws IOException,NullPointerException,ClassCastException {
 //        System.out.println();
         return interests;
     }
@@ -41,5 +45,17 @@ public class YCat extends YCreature<String> implements Comparable<String>,YMyInt
     @Override
     public int compareTo(String o) {
         return 0;
+    }
+    private static void showDesc(){
+        System.out.println("我是一个可爱的人");
+    }
+
+    @Override
+    public String toString() {
+        return "YCat{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                '}';
     }
 }

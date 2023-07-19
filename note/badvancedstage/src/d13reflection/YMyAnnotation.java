@@ -17,5 +17,5 @@ import static java.lang.annotation.ElementType.LOCAL_VARIABLE;
 @Target(value = {FIELD,TYPE,METHOD,PARAMETER,CONSTRUCTOR,LOCAL_VARIABLE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface YMyAnnotation {
-    String[] value();
+    String[] value() default "hello";
 }

@@ -10,7 +10,7 @@ import java.util.Random;
  *  通过发射创建对应的运行时类的对象
  * @data 2023/7/18 15:33
  */
-public class CReflection {
+public class CObject {
     @Test
     public void test01() throws InstantiationException, IllegalAccessException {
         Class<YDemo01> clazz = YDemo01.class;

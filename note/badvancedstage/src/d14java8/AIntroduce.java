@@ -13,4 +13,10 @@ public class AIntroduce {
     4. 强大的Stream API
     5. Optional类
      */
+
+
+/*    其他笔记：
+        框架：注解、反射、设计模式
+        AOP：acpect orient programing
+ */
 }

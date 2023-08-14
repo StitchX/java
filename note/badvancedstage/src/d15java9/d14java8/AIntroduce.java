@@ -1,4 +1,4 @@
-package d14java8;
+package d15java9.d14java8;
 
 /**
  * @author Eva   Email:
@@ -12,6 +12,14 @@ public class AIntroduce {
     3. 方法引用与构造器引用
     4. 强大的Stream API
     5. Optional类
+
+    Java8新特性简介：
+        速度更快
+        代码更少(增加了新的语法: Lambda 表达式)
+        强大的 Stream API
+        便于并行
+        最大化减少空指针异常: Optional
+        Nashorn引擎，允许在JVM上运行JS应用
      */
 
 

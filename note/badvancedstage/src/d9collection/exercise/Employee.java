@@ -20,6 +20,12 @@ public class Employee implements Comparable{
         this.myDate = myDate;
     }
 
+    public Employee(Integer integer) {
+    }
+
+    public Employee(Integer integer, String s) {
+    }
+
     public String getName() {
         return name;
     }

@@ -69,4 +69,27 @@ public class YDemo02 {
                 ", salary=" + salary +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof YDemo02 yDemo02)) return false;
+
+        if (id != yDemo02.id) return false;
+        if (age != yDemo02.age) return false;
+        if (Double.compare(yDemo02.salary, salary) != 0) return false;
+        return Objects.equals(name, yDemo02.name);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        temp = Double.doubleToLongBits(salary);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }

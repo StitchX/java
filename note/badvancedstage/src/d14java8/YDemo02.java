@@ -20,6 +20,10 @@ public class YDemo02 {
         this.age = age;
         this.salary = salary;
     }
+    public YDemo02(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public YDemo02() {
     }

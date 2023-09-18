@@ -2,7 +2,9 @@ package d14java8;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -41,14 +43,33 @@ public class FStreamAPI {
 //    创建Stream方式二：通过数组
     @Test
     public void test02(){
+        int[] arr = new int[]{1,2,3,4,5};
+//        调用Arrays类的static <T> Stream<T> stream(T[] array)：返回一个流
+        IntStream stream = Arrays.stream(arr);
 
+        YDemo02 y1 = new YDemo02(1001,"Tom");
+        YDemo02 y2 = new YDemo02(1001,"Tom");
+        YDemo02[] arr1 = new YDemo02[]{y1,y2};
+        Stream<YDemo02> s1 = Arrays.stream(arr1);
     }
+//    创建Stream方式三: 通过stream的of()
     @Test
     public void test03(){
-
+        Stream<Integer> stream = Stream.of(1,2,3,4,5,6,7);
     }
+
+//    创建Stream方式四：创建无限流
     @Test
     public void test04(){
+//        迭代
+//        public static<T> Stream<T> iterate(final T seed,final UnaryOperator<T> f)
+//        遍历前十个偶数
+        Stream.iterate(0,t->t+2).limit(10).forEach(System.out::println);
+
+
+//        生成
+//        public static<T> Stream<T> generate(Supplier<T> s)
+        Stream.generate(Math::random).limit(10).forEach(System.out::println);
 
     }
 }
